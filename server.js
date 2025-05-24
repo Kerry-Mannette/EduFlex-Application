@@ -1,7 +1,7 @@
 // 1. Install dependencies: npm install express dotenv cors
 import express, { json }  from 'express';
 import 'dotenv/config';
-import insert_user from './routes/insert_user.js';
+// import insert_user from './routes/insert_user.js';
 import get_courses from './routes/get_courses.js';
 import get_course_content from './routes/get_course_content.js';
 import get_submissions from './routes/get_submissions.js';
@@ -16,7 +16,7 @@ const app = express();
 // middleware
 app.use(json());
 app.use(express.static('public'));
-app.use('/api', insert_user);
+// app.use('/api', insert_user);
 app.use('/api', get_courses);
 app.use('/api', get_course_content);
 app.use('/api', get_submissions);
@@ -32,7 +32,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || "https://eduflex-application.onrender.com";
 app.listen(PORT, () => {
   console.log(`EduFlex Node server running on port http://localhost:${PORT}`);
 });
