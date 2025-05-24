@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduFlex - Update Course Content</title>
+   <link rel="icon" type="image/x-icon" href="../favicon/eduflex_icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/96e67bb0d3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg bg-primary">
+
+     <a class="navbar-brand p-2 bg-primary fw-bold text-white link-underline-primary" href="#"><i class="fa-solid fa-book"></i>  EduFlex</a> 
+
+    <div class=" container d-flex justify-content-end fw-bold">
+      <div class="">
+        <ul class="navbar-nav mr-auto mt-lg-0">
+      <li class="nav-item  active">
+        <a class="nav-link text-white" href="management_menu.html">
+         Menu 
+        </a>
+      </li>
+        <li class="nav-item  active">
+        <a class="nav-link text-white" href="course_content.html">
+         Courses
+        </a>
+      </li>
+        <li class="nav-item ">
+        <a class="nav-link text-white" href="index.html">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Login
+        </a>
+      </li>
+    </ul>  
+      </div>
+
+      
+    </div>
+
+  </nav>
+
+
+
+  <div class="container-fluid d-flex justify-content-center  mt-5 ">
+    <div class="">
+   <h2 class="pt-5 pb-5 fs-1 text-center fw-bold text-primary">Update Course Content</h2>
+
+    <form id="courseForm" >
+     <div class="form-group pb-3" >
+     <input type="text" class="form-control" id="course_id" name="course_id" placeholder="Course ID" required>
+     </div>
+      <div class="form-group pb-3">
+      <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+     </div>
+      <div class="form-group pb-3">
+      <input type="text" class="form-control" id="lessons" name="lessons" placeholder="lessons Id, Topic, Content" required>
+     </div>
+
+         <div class="form-group pb-3">
+   <input type="text" class="form-control" id="resources" name="resources" placeholder="Resources, Resources" required>
+     </div>
+
+    <div class="d-flex justify-content-center pt-3">
+     <button class="btn btn-primary" type="submit">Submit</button> 
+    </div>
+    
+  </form>  
+
+
+<div class="text-center fw-bold text-primary-emphasis  mt-2 mb-2" role="alert" id="response"></div> 
+    </div>
+  </div>
+
+
+  <script>
+    document.getElementById("courseForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      console.log("Data");
+      const data = {
+        
+
+             course_id : document.getElementById('course_id').value,
+             title : document.getElementById('title').value,
+             lessons : document.getElementById('lessons').value,
+             resources : document.getElementById('resources').value
+            
+      };
+      try {
+        const response = await fetch("/api/update-course", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
+        });
+        const json = await response.json();
+        document.getElementById("response").innerText = json.message || "Success!";
+      } catch (err) {
+        document.getElementById("response").innerText = "Network error.";
+      }
+    });
+  </script> 
+     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    
+    <div class="container-fluid p-3 fixed-bottom">
+      <footer class="text-sm-center text-primary"><i class="fa-regular fa-copyright"></i> All Rights Reserved. EduFlex</footer>
+    </div>
+    
+</body>
+</html>
