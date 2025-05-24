@@ -37,7 +37,7 @@ console.log(result.rows);
     `INSERT INTO users (user_id, first_name, last_name, email, role)
      VALUES (:id, :fname, :lname, :email, :role)`,
     {
-      id: num,
+      id: user.user_id,
       fname: user.first_name,
       lname: user.last_name,
       email: user.email,
