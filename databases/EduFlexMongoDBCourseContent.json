@@ -1,0 +1,75 @@
+[ 
+{ 
+"course_id": 101, 
+"title": "Intro to Web Apps", 
+"lessons": [ 
+{ 
+"lesson_id": "l1", 
+"topic": "REST APIs", 
+"content": "Understanding the basics of RESTful design...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+},
+{ 
+"lesson_id": "l2", 
+"topic": "REST APIs", 
+"content": "Understanding the basics of RESTful design...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+} 
+] 
+},
+{ 
+"course_id": 102, 
+"title": "Intro to Apex Oracle", 
+"lessons": [ 
+{ 
+"lesson_id": "l2", 
+"topic": "Apex Oracle", 
+"content": "Understanding the basics of Apex Oracle...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+} 
+] 
+},  
+{ 
+"course_id": 103, 
+"title": "Intro to MongoDB", 
+"lessons": [ 
+{ 
+"lesson_id": "l3", 
+"topic": "MongoDB", 
+"content": "Understanding the basics of MongoDB...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+} 
+] 
+},
+{ 
+"course_id": 104, 
+"title": "Intro to Neo4j", 
+"lessons": [ 
+{ 
+"lesson_id": "l4", 
+"topic": "Neo4j", 
+"content": "Understanding the basics of Neo4j...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+} 
+] 
+},
+{ 
+"course_id": 105, 
+"title": "Intro to Oracle Cloud", 
+"lessons": [ 
+{ 
+"lesson_id": "l5", 
+"topic": "Oracle Cloud", 
+"content": "Understanding the basics of Oracle Cloud...", 
+"resources": ["https://restfulapi.net", 
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"] 
+} 
+] 
+}  
+] 
+

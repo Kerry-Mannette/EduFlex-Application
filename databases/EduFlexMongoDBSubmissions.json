@@ -1,0 +1,28 @@
+[{
+  "student_id": 1,
+  "course_id": 101,
+  "submission_date": "4/5/2025",
+  "grade": 30.06
+}, {
+  "student_id": 102,
+  "course_id": 2,
+  "submission_date": "5/14/2025",
+  "grade": 84.46
+}, {
+  "student_id": 103,
+  "course_id": 3,
+  "submission_date": "6/10/2025",
+  "grade": 34.47
+}, {
+  "student_id": 104,
+  "course_id": 4,
+  "submission_date": "9/18/2025",
+  "grade": 24.98
+}
+, {
+  "student_id": 105,
+  "course_id": 5,
+  "submission_date": "9/10/2025",
+  "grade": 24.98
+}
+]
