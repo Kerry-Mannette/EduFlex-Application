@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const PORT = process.env.PORT || "https://eduflex-application.onrender.com";
+
 app.listen(PORT, () => {
-  console.log(`EduFlex Node server running on port http://localhost:${PORT}`);
+  console.log(`EduFlex Node server running on port: ${PORT}`);
 });
