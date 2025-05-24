@@ -20,7 +20,18 @@ console.log(result.rows);
   }
     let str = user.user_id;
     let num = Number(str);
-  
+
+  // // user.user_id = Number(user.user_id);
+
+  // console.log(user.user_id);
+
+  //   const numericUserId = parseInt(user.user_id, 10);
+
+  // if (isNaN(numericUserId)) {
+  //   console.error('Error: User ID must be a numeric value.');
+  //   return;
+  // }
+  // console.log(numericUserId)
 
   await connection.execute(
     `INSERT INTO users (user_id, first_name, last_name, email, role)
