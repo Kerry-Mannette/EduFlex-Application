@@ -2,7 +2,7 @@
 import express, { json }  from 'express';
 import 'dotenv/config';
 // import insert_user from './routes/insert_user.js';
-import get_courses from './routes/get_courses.js';
+// import get_courses from './routes/get_courses.js';
 import get_course_content from './routes/get_course_content.js';
 import get_submissions from './routes/get_submissions.js';
 import get_submissions_average_grade from './routes/get_submissions_average_grade.js';
@@ -17,7 +17,7 @@ const app = express();
 app.use(json());
 app.use(express.static('public'));
 // app.use('/api', insert_user);
-app.use('/api', get_courses);
+// app.use('/api', get_courses);
 app.use('/api', get_course_content);
 app.use('/api', get_submissions);
 app.use('/api', get_submissions_average_grade);
