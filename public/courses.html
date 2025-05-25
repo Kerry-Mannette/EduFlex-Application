@@ -61,26 +61,25 @@
       <!-- Data will be dynamically inserted here -->
     </tbody>
   </table>
-  <!-- <h2>Average Grade: <span id="average-grade">Loading...</span></h2> -->
-
   
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('/api/courses')
-                .then(response => response.json())
-                .then(courses => {
-                    const table = document.getElementById('resultsTable');
-                    courses.forEach(course => {
-                        let row = table.insertRow();
-                        row.insertCell(0).textContent = course.course_id;
-                        row.insertCell(1).textContent = course.cost;
-                        row.insertCell(2).textContent = course.user_id;
-                        row.insertCell(2).textContent = course.submission_date;
-                        row.insertCell(2).textContent = course.grade;
-                    });
-                })
-                .catch(error => console.error('Error loading courses:', error));
-        });
+        async function fetchCourses() {
+            const response = await fetch('/api/courses');
+            const courses = await response.json();
+
+            const tableBody = document.getElementById('resultsTable');
+            courses.forEach(course => {
+                const row = document.createElement('tr');
+                course.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    row.appendChild(td);
+                });
+                tableBody.appendChild(row);
+            });
+        }
+
+        fetchCourses();
     </script>
   
    </div> 
@@ -89,7 +88,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     
     <div class="container-fluid p-3 fixed-bottom">
-      <footer class="text-sm-center text-primary">2025 <i class="fa-regular fa-copyright"></i> All Rights Reserved. EduFlex</footer>
+      <footer class="text-sm-center text-primary"><i class="fa-regular fa-copyright"></i> All Rights Reserved. EduFlex</footer>
     </div>
     
 </body>

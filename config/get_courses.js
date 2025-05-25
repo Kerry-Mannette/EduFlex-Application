@@ -6,22 +6,25 @@
 
 // initOracleClient({ libDir: process.env.ORACLE_CLIENT_PATH });
 
-// async function getCourses() {
+
 //   const connection = await getConnection({
 //     user: process.env.ORACLE_USER,
 //     password: process.env.ORACLE_PASSWORD,
 //     connectString: process.env.ORACLE_CONNECT_STRING
 //   });
 
-//     if(connection){
-//     console.log("Connected")
-// const courses = await connection.execute('SELECT * FROM courses');
-// res.json(courses);
-// console.log(courses.course_id);
+// async function getCourses() {
+//     try {
 
-//   }
-    
-//   await connection.close();
+//         const result = await connection.execute(`SELECT course_id, cost, user_id, submission_date, grade FROM courses`);
+//         return result.rows;
+//     } catch (error) {
+//         console.error(error);
+//     } finally {
+//         if (connection) {
+//             await connection.close();
+//         }
+//     }
 // }
 
 // export default getCourses;

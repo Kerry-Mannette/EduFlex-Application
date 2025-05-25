@@ -3,15 +3,10 @@
 
 // import getCourses from '../config/get_courses.js';
 
-// router.post('/courses', async (req, res) => {
-//   // const user = req.body;
-//   try {
-//     await getCourses(res);
-//     // res.json({ status: 'success', message: 'User registered in Oracle database' });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ status: 'error', message: err.message });
-//   }
+// router.get('/courses', async (req, res) => {
+//     const courses = await getCourses();
+//     res.json(courses);
 // });
+
 
 // export default router;
