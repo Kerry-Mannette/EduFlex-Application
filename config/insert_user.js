@@ -6,7 +6,7 @@
 
 // initOracleClient({ libDir: process.env.ORACLE_CLIENT_PATH });
 
-// async function insertUser(user) {
+// async function insertUser(user, res) {
 //   const connection = await getConnection({
 //     user: process.env.ORACLE_USER,
 //     password: process.env.ORACLE_PASSWORD,
@@ -18,21 +18,8 @@
 // const result = await connection.execute('SELECT * FROM users');
 // console.log(result.rows);
 //   }
-//     let str = user.user_id;
-//     let num = Number(str);
 
-//   // // user.user_id = Number(user.user_id);
-
-//   // console.log(user.user_id);
-
-//   //   const numericUserId = parseInt(user.user_id, 10);
-
-//   // if (isNaN(numericUserId)) {
-//   //   console.error('Error: User ID must be a numeric value.');
-//   //   return;
-//   // }
-//   // console.log(numericUserId)
-
+// console.log(user.email);
 //   await connection.execute(
 //     `INSERT INTO users (user_id, first_name, last_name, email, role)
 //      VALUES (:id, :fname, :lname, :email, :role)`,
@@ -45,6 +32,7 @@
 //     },
 //     { autoCommit: true }
 //   );
+//   res.status(200).json({ message: "User register successfully" });
 
 //   await connection.close();
 // }
