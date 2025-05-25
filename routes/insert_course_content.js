@@ -4,7 +4,7 @@ const router = Router();
 import insertCourse from '../config/insert_course_content.js';
 
 
-router.post('/add-course', async (req, res) => {
+router.post('/add-course-content', async (req, res) => {
      const course = req.body;
       console.log("Course: "+course.course_id);
 
